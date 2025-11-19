@@ -32,7 +32,7 @@ filelock==3.16.1
 Flask==3.1.0
 flask-cors==6.0.1
 Flask-Login==0.6.3
-Flask-MySQLdb==2.0.0
+## Removed Flask-MySQLdb to avoid compiling mysqlclient on Vercel; use a pure-Python driver if needed
 Flask-SQLAlchemy==3.1.1
 Flask-WTF==1.2.2
 fonttools==4.55.3
@@ -72,7 +72,8 @@ MarkupSafe==2.1.5
 matplotlib==3.10.0
 matplotlib-inline==0.1.6
 mistune==3.0.2
-mysqlclient==2.2.7
+## Replaced mysqlclient (native extension) with a pure-Python driver to avoid build failures on platforms without system libs.
+mysql-connector-python==8.0.34
 nbclient==0.10.0
 nbconvert==7.16.3
 nbformat==5.10.3
