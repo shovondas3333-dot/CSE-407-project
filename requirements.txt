@@ -73,7 +73,8 @@ matplotlib==3.10.0
 matplotlib-inline==0.1.6
 mistune==3.0.2
 ## Replaced mysqlclient (native extension) with a pure-Python driver to avoid build failures on platforms without system libs.
-mysql-connector-python==8.0.34
+## Use an available mysql-connector-python version compatible with the platform
+mysql-connector-python==8.0.33
 nbclient==0.10.0
 nbconvert==7.16.3
 nbformat==5.10.3
